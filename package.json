@@ -1,0 +1,17 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "@flowfuse/node-red-dashboard": "~0.11.3",
+        "@ia-cloud/node-red-contrib-ia-cloud-dashboard": "~0.1.4",
+        "@oringnet/node-red-contrib-oring-paas": "~1.1.0",
+        "@s1seven/node-red-chartjs": "~0.0.4",
+        "node-red-contrib-echarts": "~1.0.0",
+        "node-red-contrib-ui-level": "~0.1.46",
+        "node-red-node-mysql": "~2.0.0",
+        "node-red-node-ui-lineargauge": "~0.3.7",
+        "node-red-node-ui-table": "~0.4.3"
+    }
+}
