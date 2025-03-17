@@ -1,0 +1,88 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b2cfc9a277bb02f2",
+        "type": "websocket-client",
+        "path": "/ws/esp1",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "",
+        "subprotocol": "",
+        "headers": []
+    },
+    {
+        "id": "a1ba470ec72d3a1d",
+        "type": "websocket-listener",
+        "path": "/ws/esp",
+        "wholemsg": "false"
+    },
+    {
+        "id": "d8b707a24d5de8e0",
+        "type": "websocket in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "server": "a1ba470ec72d3a1d",
+        "client": "",
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "48155266baa8f3f0",
+                "5f4c8820c7406dd0"
+            ]
+        ]
+    },
+    {
+        "id": "b43f38953a118fe2",
+        "type": "websocket out",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "server": "",
+        "client": "b2cfc9a277bb02f2",
+        "x": 480,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "48155266baa8f3f0",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 1",
+        "func": "// Clean the message so only payload remains\nmsg = { payload: msg.payload };\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "b43f38953a118fe2"
+            ]
+        ]
+    },
+    {
+        "id": "5f4c8820c7406dd0",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 420,
+        "wires": []
+    }
+]
